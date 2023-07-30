@@ -1,0 +1,6 @@
+<nav>
+  <LinkTo @route='dashboard'>Dashboard</LinkTo>
+  <LinkTo @route='about'>About</LinkTo>
+  {{! <LinkTo @route='admin'>Admin</LinkTo> }}
+  <button {{on 'click' this.handleAdminClick}}>Admin</button>
+</nav>
