@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 
 export const RootPage = () => {
   const navigate = useNavigate();
@@ -24,5 +23,9 @@ export const RootPage = () => {
     };
   }, [navigate]);
 
-  return <Outlet />;
+  return (
+    <div className="admin-mfe" style={{ height: '100%' }}>
+      <Outlet />
+    </div>
+  );
 };

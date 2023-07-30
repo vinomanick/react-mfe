@@ -1,5 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
-import { Outlet } from 'react-router-dom';
+import { createBrowserRouter, Outlet } from 'react-router-dom';
 import { RootPage } from './pages/root';
 
 export const generateRouter = (options = {}) =>
