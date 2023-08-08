@@ -11,7 +11,6 @@ export const mountReactApp = ({
   options?: { basename: string };
 }) => {
   const { basename } = options;
-  localStorage.setItem('basename', basename);
 
   const root = ReactDOM.createRoot(element || document.getElementById('root'));
   root.render(
