@@ -5,7 +5,10 @@ export default class ReactAppMountModifier extends Modifier {
     import('http://localhost:4173/admin-mfe.js').then((module) => {
       module.mountApp({
         element,
-        options: { basename: '/', baseURL: 'http://localhost:4173/' },
+        options: {
+          basename: '/a/',
+          baseURL: 'http://localhost:4173/',
+        },
       });
     });
   }
