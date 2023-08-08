@@ -11,24 +11,13 @@ export default defineConfig(({ mode }) => {
     base: env.BASE_URL,
     envDir,
     build: {
-      lib: {
-        entry: resolve(__dirname, 'src/main.tsx'),
-        formats: ['es'],
-        fileName: 'admin-mfe',
-      },
+      manifest: true,
       rollupOptions: {
         external: [],
         output: { globals: {}},
       },
     },
-    resolve: {
-      alias: {
-        src: resolve('src/'),
-      },
-    },
-    define: {
-      'process.env.NODE_ENV': `"${mode}"`,
-    },
+    resolve: { alias: { src: resolve('src/') } },
     plugins: [react()],
   };
 });
